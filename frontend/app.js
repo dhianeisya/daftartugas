@@ -1,3 +1,6 @@
+// Ubah URL ini ke URL backend production Anda jika sudah dideploy ke hosting cloud (misalnya Render/Railway)
+const API_BASE_URL = 'http://localhost:3000';
+
 const form = document.getElementById('taskForm');
 
 form.addEventListener('submit', async (e) => {
@@ -9,7 +12,7 @@ form.addEventListener('submit', async (e) => {
         deadline: document.getElementById('deadline').value
     };
 
-    await fetch('http://localhost:3000/api/tasks', {
+    await fetch(`${API_BASE_URL}/api/tasks`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -33,7 +36,7 @@ form.addEventListener('submit', async (e) => {
 async function getTasks() {
 
     const response = await fetch(
-        'http://localhost:3000/api/tasks'
+        `${API_BASE_URL}/api/tasks`
     );
 
     const data = await response.json();
@@ -102,7 +105,7 @@ async function getTasks() {
 async function selesaikanTugas(id) {
 
     await fetch(
-        `http://localhost:3000/api/tasks/${id}`,
+        `${API_BASE_URL}/api/tasks/${id}`,
         {
             method: 'PUT'
         }
@@ -136,7 +139,7 @@ async function editTugas(
     );
 
     await fetch(
-        `http://localhost:3000/api/tasks/edit/${id}`,
+        `${API_BASE_URL}/api/tasks/edit/${id}`,
         {
             method: 'PUT',
             headers: {
@@ -164,7 +167,7 @@ async function hapusTugas(id) {
     if (!konfirmasi) return;
 
     await fetch(
-        `http://localhost:3000/api/tasks/${id}`,
+        `${API_BASE_URL}/api/tasks/${id}`,
         {
             method: 'DELETE'
         }
