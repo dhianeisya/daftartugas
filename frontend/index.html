@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskMate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2ea7d6">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Kiri -->
+        <div class="left-panel">
+            <h1>TaskMate</h1>
+
+            <form id="taskForm">
+                <input type="text" id="judul"
+                    placeholder="Judul Tugas" required>
+
+                <input type="text" id="mata_kuliah"
+                    placeholder="Mata Kuliah" required>
+
+                <input type="date" id="deadline" required>
+
+                <button type="submit">
+                    Tambah Tugas
+                </button>
+            </form>
+        </div>
+
+        <!-- Kanan -->
+        <div class="right-panel">
+            <h2>Daftar Tugas</h2>
+            <div id="taskList"></div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

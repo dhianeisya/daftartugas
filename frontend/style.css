@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    padding:40px;
+    color:#333;
+}
+
+/* ===== Layout ===== */
+
+.container{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+}
+
+.left-panel{
+    width:35%;
+    position:sticky;
+    top:40px;
+}
+
+.right-panel{
+    width:65%;
+}
+
+/* ===== Judul ===== */
+
+h1{
+    color:#2ea7d6;
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:30px;
+}
+
+h2{
+    color:#2ea7d6;
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:30px;
+}
+
+/* ===== Form ===== */
+
+form{
+    background:#fff;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+
+    border:2px solid #e6e6e6;
+    border-radius:15px;
+
+    font-size:15px;
+    outline:none;
+
+    transition:.3s;
+}
+
+input:focus{
+    border-color:#2ea7d6;
+}
+
+form button{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:15px;
+
+    background:#2ea7d6;
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#2394bf;
+    transform:translateY(-3px);
+}
+
+/* ===== Daftar Tugas ===== */
+
+#taskList{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.task-card{
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.task-card:hover{
+    transform:translateY(-5px);
+}
+
+.task-card h3{
+    color:#2ea7d6;
+    font-size:1.8rem;
+    margin-bottom:15px;
+}
+
+.task-card p{
+    margin:12px 0;
+    line-height:1.8;
+}
+
+.task-card strong{
+    color:#2ea7d6;
+}
+
+/* ===== Status ===== */
+
+.status{
+    padding:7px 15px;
+    border-radius:20px;
+    color:white;
+    font-size:13px;
+    font-weight:600;
+}
+
+.selesai{
+    background:#27ae60;
+}
+
+.belum{
+    background:#f39c12;
+}
+
+/* ===== Tombol ===== */
+
+.btn-selesai,
+.btn-edit,
+.btn-hapus{
+    border:none;
+    padding:10px 18px;
+    border-radius:12px;
+
+    color:white;
+    font-weight:600;
+
+    cursor:pointer;
+    margin-top:15px;
+    margin-right:10px;
+
+    transition:.3s;
+}
+
+.btn-selesai{
+    background:#27ae60;
+}
+
+.btn-edit{
+    background:#3498db;
+}
+
+.btn-hapus{
+    background:#e74c3c;
+}
+
+.btn-selesai:hover,
+.btn-edit:hover,
+.btn-hapus:hover{
+    transform:translateY(-3px);
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .left-panel,
+    .right-panel{
+        width:100%;
+    }
+
+    .left-panel{
+        position:static;
+    }
+
+    body{
+        padding:20px;
+    }
+
+    h1{
+        font-size:2.3rem;
+    }
+}
